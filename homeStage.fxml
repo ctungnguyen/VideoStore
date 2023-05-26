@@ -1,42 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SeparatorMenuItem?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lastassessment.HomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1128.0" prefWidth="1207.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="300.0" layoutY="149.0" text="Main" />
-      <Label fx:id="name" layoutX="140.0" layoutY="97.0" text="Label" />
-      <Label fx:id="pass" layoutX="140.0" layoutY="131.0" text="Label" />
-      <Button fx:id="logoutButton" layoutX="116.0" layoutY="321.0" mnemonicParsing="false" onAction="#logout" text="Log out" />
-      <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="600.0" AnchorPane.bottomAnchor="370.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="Home" />
-            <Menu mnemonicParsing="false" text="List">
-              <items>
-                <MenuItem fx:id="itemListButton" mnemonicParsing="false" onAction="#moveToListStage" text="Item List" />
-                  <MenuItem mnemonicParsing="false" text="Customer List" />
-              </items>
-            </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-            <Menu mnemonicParsing="false" text="Acoount">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Your Profile" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" onAction="#logout" onMenuValidation="#logout" text="Log out" />
-               </items></Menu>
-        </menus>
-      </MenuBar>
-      <TextField layoutX="377.0" layoutY="1.0" prefWidth="222.0" />
+      <AnchorPane layoutX="139.0" layoutY="525.0" />
+      <BorderPane layoutX="-8.0" layoutY="-3.0" prefHeight="1493.0" prefWidth="1215.0" AnchorPane.bottomAnchor="-362.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0">
+         <bottom>
+            <AnchorPane prefHeight="395.0" prefWidth="1122.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="406.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Genie's Video Store. ">
+                     <font>
+                        <Font name="Leelawadee" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="88.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our main goal is to always achieve a high level of customer satisfaction with the services and products that we provide.">
+                     <font>
+                        <Font name="Leelawadee" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="86.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our store sells all kinds of video/film products, like DVDs, movie records, video games discs.">
+                     <font>
+                        <Font name="Leelawadee" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="87.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We’re thrilled you’ve decided to visit us - please check out our application to discover what we’re all about.">
+                     <font>
+                        <Font name="Leelawadee" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="444.0" layoutY="229.0" mnemonicParsing="false" text="You're a member? Sign in">
+                     <font>
+                        <Font name="Leelawadee UI" size="18.0" />
+                     </font>
+                  </Button>
+                  <Text layoutX="544.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="472.0" layoutY="325.0" mnemonicParsing="false" text="Create an account">
+                     <font>
+                        <Font name="Leelawadee UI" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <top>
+            <AnchorPane prefHeight="916.0" prefWidth="1407.0" style="-fx-background-color: #243B55;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="#fcfcfc" layoutX="80.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enjoy your exclusive experience with various TV shows, movies and video games. You can cancel anytime" wrappingWidth="983.63330078125">
+                     <font>
+                        <Font name="Javanese Text" size="21.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="112.0" layoutY="51.0" text="Genie's Video Store" textFill="#4488cc">
+                     <font>
+                        <Font name="Segoe Script" size="44.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="#4488cc" glyphName="FILM" layoutX="64.0" layoutY="588.0" size="5em" text="" />
+                  <Label layoutX="130.0" layoutY="385.0" text="DVDs" textFill="#4488cc">
+                     <font>
+                        <Font name="Segoe UI Black" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="146.0" layoutY="462.0" text="Video Games" textFill="#4488cc">
+                     <font>
+                        <Font name="Segoe UI Black" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="150.0" layoutY="551.0" text="Movie records" textFill="#4488cc">
+                     <font>
+                        <Font name="Segoe UI Black" size="22.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="#4488cc" glyphName="GAMEPAD" layoutX="64.0" layoutY="499.0" size="5em" />
+                  <FontAwesomeIconView glyphName="CLOSE" text="" textAlignment="CENTER" wrappingWidth="26.428571701049805" />
+                  <Text fill="#fffdfd" layoutX="79.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="There are 2-day items, and 1-week items for rent.">
+                     <font>
+                        <Font name="Javanese Text" size="21.0" />
+                     </font>
+                  </Text>
+                  <FontAwesomeIconView fill="#4488cc" glyphName="HEADPHONES" layoutX="64.0" layoutY="422.0" size="5em" />
+                  <Button layoutX="1264.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="49.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CLOSE" />
+                     </graphic>
+                  </Button>
+                  <Button layoutX="1214.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="MINUS" />
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
    </children>
 </AnchorPane>
