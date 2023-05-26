@@ -8,14 +8,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1128.0" prefWidth="1207.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="917.0" prefWidth="1236.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="139.0" layoutY="525.0" />
-      <BorderPane layoutX="-8.0" layoutY="-3.0" prefHeight="1493.0" prefWidth="1215.0" AnchorPane.bottomAnchor="-362.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0">
+      <BorderPane layoutX="-8.0" layoutY="-2.0" prefHeight="1492.0" prefWidth="1321.0" AnchorPane.bottomAnchor="-362.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="-106.0" AnchorPane.topAnchor="-2.0">
          <bottom>
-            <AnchorPane prefHeight="395.0" prefWidth="1122.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="375.0" prefWidth="1350.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
                <children>
-                  <Text layoutX="406.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Genie's Video Store. ">
+                  <Text layoutX="406.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Genie's Video Store . ">
                      <font>
                         <Font name="Leelawadee" size="24.0" />
                      </font>
@@ -90,12 +90,12 @@
                      </font>
                   </Text>
                   <FontAwesomeIconView fill="#4488cc" glyphName="HEADPHONES" layoutX="64.0" layoutY="422.0" size="5em" />
-                  <Button layoutX="1264.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="49.0">
+                  <Button layoutX="1299.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="49.0">
                      <graphic>
                         <FontAwesomeIconView glyphName="CLOSE" />
                      </graphic>
                   </Button>
-                  <Button layoutX="1214.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0">
+                  <Button layoutX="1249.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0">
                      <graphic>
                         <FontAwesomeIconView glyphName="MINUS" />
                      </graphic>
