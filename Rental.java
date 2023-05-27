@@ -11,7 +11,7 @@ public class Rental {
     private String status;
 
     // Define the connection URL
-    private static final String connectionUrl = "jdbc:sqlserver://yourserver.database.windows.net:1433;" +
+    private static final String connectionUrl = "jdbc:mysql://localhost:3306/group;" +
             "database=yourdatabase;" +
             "user=yourusername@yourserver;" +
             "password=yourpassword";
