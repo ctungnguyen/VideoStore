@@ -14,10 +14,7 @@ public class Rental {
     private static final String connectionUrl = "jdbc:sqlserver://yourserver.database.windows.net:1433;" +
             "database=yourdatabase;" +
             "user=yourusername@yourserver;" +
-            "password=yourpassword;" +
-            "encrypt=true;" +
-            "trustServerCertificate=false;" +
-            "loginTimeout=30;";
+            "password=yourpassword";
 
     public Rental(Item item, Customer customer) {
         this.item = item;
