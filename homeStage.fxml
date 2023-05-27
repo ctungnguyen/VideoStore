@@ -100,12 +100,12 @@
                         <FontAwesomeIconView glyphName="MINUS" />
                      </graphic>
                   </Button>
-                  <Button layoutX="950.0" layoutY="8.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: #fff;" text="Home" textFill="#0d0d0d">
+                  <Button layoutX="950.0" layoutY="3.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: transparent;" text="Home" textFill="#fff9f9">
                      <font>
                         <Font name="Leelawadee UI" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="1026.0" layoutY="8.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #fff;" text="About us" textFill="#0d0d0d">
+                  <Button layoutX="1026.0" layoutY="3.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: transparent;" text="About us" textFill="#fffdfd">
                      <font>
                         <Font name="Leelawadee UI" size="16.0" />
                      </font>
