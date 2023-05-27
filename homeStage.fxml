@@ -13,83 +13,83 @@
       <AnchorPane layoutX="139.0" layoutY="525.0" />
       <BorderPane layoutX="-8.0" layoutY="-2.0" prefHeight="1492.0" prefWidth="1321.0" AnchorPane.bottomAnchor="-362.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="-106.0" AnchorPane.topAnchor="-2.0">
          <bottom>
-            <AnchorPane prefHeight="375.0" prefWidth="1350.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="371.0" prefWidth="1350.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
                <children>
-                  <Text layoutX="406.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Genie's Video Store . ">
+                  <Text layoutX="406.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Genie's Video Store ">
                      <font>
                         <Font name="Leelawadee" size="24.0" />
                      </font>
                   </Text>
-                  <Text layoutX="88.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our main goal is to always achieve a high level of customer satisfaction with the services and products that we provide.">
-                     <font>
-                        <Font name="Leelawadee" size="18.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="86.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our store sells all kinds of video/film products, like DVDs, movie records, video games discs.">
-                     <font>
-                        <Font name="Leelawadee" size="18.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="87.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We’re thrilled you’ve decided to visit us - please check out our application to discover what we’re all about.">
-                     <font>
-                        <Font name="Leelawadee" size="18.0" />
-                     </font>
-                  </Text>
-                  <Button layoutX="444.0" layoutY="229.0" mnemonicParsing="false" text="You're a member? Sign in">
+                  <Button layoutX="444.0" layoutY="231.0" mnemonicParsing="false" style="-fx-background-color: #4488cc;" text="You're a member? Sign in" textFill="WHITE">
                      <font>
                         <Font name="Leelawadee UI" size="18.0" />
                      </font>
                   </Button>
-                  <Text layoutX="544.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or">
+                  <Text layoutX="548.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Text>
-                  <Button layoutX="472.0" layoutY="325.0" mnemonicParsing="false" text="Create an account">
+                  <Button layoutX="472.0" layoutY="327.0" mnemonicParsing="false" style="-fx-background-color: #4488cc;" text="Create an account" textFill="#fcf6f6">
                      <font>
                         <Font name="Leelawadee UI" size="18.0" />
                      </font>
                   </Button>
+                  <Label layoutX="85.0" layoutY="74.0" text="Our main goal is to always achieve a high level of customer satisfaction with the services and products that we provide.">
+                     <font>
+                        <Font name="Leelawadee UI" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="84.0" layoutY="112.0" text="Our store sells all kinds of video/film products, like DVDs, movie records, video games discs.">
+                     <font>
+                        <Font name="Leelawadee" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="85.0" layoutY="157.0" text="We’re thrilled you’ve decided to visit us - please check out our application to discover what we’re all about.">
+                     <font>
+                        <Font name="Leelawadee" size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </bottom>
          <top>
             <AnchorPane prefHeight="916.0" prefWidth="1407.0" style="-fx-background-color: #243B55;" BorderPane.alignment="CENTER">
                <children>
-                  <Text fill="#fcfcfc" layoutX="80.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enjoy your exclusive experience with various TV shows, movies and video games. You can cancel anytime" wrappingWidth="983.63330078125">
+                  <Text fill="#fcfcfc" layoutX="79.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enjoy your exclusive experience with various TV shows, movies and video games. You can cancel at anytime." wrappingWidth="983.63330078125">
                      <font>
                         <Font name="Javanese Text" size="21.0" />
                      </font>
                   </Text>
-                  <Label layoutX="112.0" layoutY="51.0" text="Genie's Video Store" textFill="#4488cc">
+                  <Label layoutX="389.0" layoutY="42.0" text="Genie's Video Store" textFill="#4488cc">
                      <font>
-                        <Font name="Segoe Script" size="44.0" />
+                        <Font name="Segoe Script" size="52.0" />
                      </font>
                   </Label>
-                  <FontAwesomeIconView fill="#4488cc" glyphName="FILM" layoutX="64.0" layoutY="588.0" size="5em" text="" />
-                  <Label layoutX="130.0" layoutY="385.0" text="DVDs" textFill="#4488cc">
-                     <font>
-                        <Font name="Segoe UI Black" size="22.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="146.0" layoutY="462.0" text="Video Games" textFill="#4488cc">
+                  <FontAwesomeIconView fill="#4488cc" glyphName="FILM" layoutX="64.0" layoutY="606.0" size="5em" text="" />
+                  <Label layoutX="146.0" layoutY="403.0" text="DVDs" textFill="#4488cc">
                      <font>
                         <Font name="Segoe UI Black" size="22.0" />
                      </font>
                   </Label>
-                  <Label layoutX="150.0" layoutY="551.0" text="Movie records" textFill="#4488cc">
+                  <Label layoutX="146.0" layoutY="480.0" text="Video Games" textFill="#4488cc">
                      <font>
                         <Font name="Segoe UI Black" size="22.0" />
                      </font>
                   </Label>
-                  <FontAwesomeIconView fill="#4488cc" glyphName="GAMEPAD" layoutX="64.0" layoutY="499.0" size="5em" />
+                  <Label layoutX="150.0" layoutY="569.0" text="Movie records" textFill="#4488cc">
+                     <font>
+                        <Font name="Segoe UI Black" size="22.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="#4488cc" glyphName="GAMEPAD" layoutX="64.0" layoutY="517.0" size="5em" />
                   <FontAwesomeIconView glyphName="CLOSE" text="" textAlignment="CENTER" wrappingWidth="26.428571701049805" />
-                  <Text fill="#fffdfd" layoutX="79.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="There are 2-day items, and 1-week items for rent.">
+                  <Text fill="#fffdfd" layoutX="82.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="There are 2-day items, and 1-week items for rent.">
                      <font>
                         <Font name="Javanese Text" size="21.0" />
                      </font>
                   </Text>
-                  <FontAwesomeIconView fill="#4488cc" glyphName="HEADPHONES" layoutX="64.0" layoutY="422.0" size="5em" />
+                  <FontAwesomeIconView fill="#4488cc" glyphName="HEADPHONES" layoutX="64.0" layoutY="440.0" size="5em" />
                   <Button layoutX="1299.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="49.0">
                      <graphic>
                         <FontAwesomeIconView glyphName="CLOSE" />
