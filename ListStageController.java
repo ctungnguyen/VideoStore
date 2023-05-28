@@ -153,6 +153,7 @@ ObservableList<ListModel> listModelObservableList = FXCollections.observableArra
                     int leftCopies = 0;
                     if (rsSelect.next()) {
                         leftCopies = rsSelect.getInt("CopiesLeft");
+                        System.out.println(leftCopies);
                     }
 
                     if (leftCopies == 0) {
