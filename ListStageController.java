@@ -1,23 +1,23 @@
 package com.example.lastassessment;
 
+import com.example.lastassessment.OOP.Item;
+import com.example.lastassessment.a.Customer;
+import com.example.lastassessment.a.DatabaseConnection;
+import com.example.lastassessment.a.ListModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.List;
-import java.util.Properties;
+import java.sql.*;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -43,6 +43,21 @@ private TableColumn<ListModel, String> rentalFeeColumn;
 private TableColumn<ListModel, String> rentalStatusColumn;
 @FXML
 private TextField searchTextField;
+private ListModel item;
+private Customer customer;
+private String status;
+public ListModel getItem() {
+    return item;
+}
+private Customer getCustomer() {
+    return customer;
+}
+public String getStatus(){
+    return  status;
+}
+ public void setStatus(String a){
+    this.status = a;
+}
 
 ObservableList<ListModel> listModelObservableList = FXCollections.observableArrayList();
 
@@ -60,13 +75,13 @@ ObservableList<ListModel> listModelObservableList = FXCollections.observableArra
         ResultSet queryOutput = statement.executeQuery(productViewQuery);
 
         while (queryOutput.next()){
-            Integer queryProductID = queryOutput.getInt("ProductID");
+            String queryProductID = "I" + String.format("%03d", queryOutput.getInt("ProductID")) + "-" + String.format("%04d", queryOutput.getInt("ProductID"));
             String querryTitle = queryOutput.getString("Title");
             String querryRentalType = queryOutput.getString("RentalType");
             String querryGenre = queryOutput.getString("Genre");
             String querryLoanType = queryOutput.getString("LoanType");
             Integer queryCopiesLeft = queryOutput.getInt("CopiesLeft");
-            Double querryRentalFee = queryOutput.getDouble("RentalFee");
+            String querryRentalFee = queryOutput.getDouble("RentalFee") + " USD";
             String querryRentalStatus = queryOutput.getString("RentalStatus");
 
                 //populate the Observation
@@ -116,5 +131,80 @@ ObservableList<ListModel> listModelObservableList = FXCollections.observableArra
     }
 
 }
+
+    @FXML
+    private void rent(ActionEvent event) throws IOException {
+        DatabaseConnection connection = new DatabaseConnection();
+        Connection connectDB = connection.getConnection();
+        ListModel selectedItem = itemList.getSelectionModel().getSelectedItem();
+        if (itemList != null) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Rent Item");
+            alert.setHeaderText(null);
+            alert.setContentText("Are you sure you want to rent " + selectedItem.getTitle() + "?");
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.isPresent() && result.get() == ButtonType.OK) {
+                try  {
+                    // Check if there are any copies of the item available
+                    String select = "SELECT Copiesleft FROM product WHERE ProductID = ?";
+                    PreparedStatement psSelect = connectDB.prepareStatement(select);
+                    psSelect.setString(1, itemList.getId());
+                    ResultSet rsSelect = psSelect.executeQuery();
+                    int leftCopies = 0;
+                    if (rsSelect.next()) {
+                        leftCopies = rsSelect.getInt("CopiesLeft");
+                    }
+
+                    if (leftCopies == 0) {
+                        System.out.println("No copy of " + selectedItem.getTitle() + " are available for rent.");
+                        return;
+                    }
+
+                    if (item.getLoanType().equals("2-day") && customer.getAccountStyle().equals("Guest")) {
+                        System.out.println("Guest accounts cannot rent 2-day items.");
+                        return;
+                    }
+
+                    // Check if the customer has reached the maximum number of rentals
+                    String countSql = "SELECT COUNT(*) AS RentalCount FROM rental WHERE account_id = ? AND Status = 'Not Returned'";
+                    PreparedStatement psCount = connectDB.prepareStatement(countSql);
+                    psCount.setInt(1, Integer.parseInt(customer.getAccount_id()));
+                    ResultSet rsCount = psCount.executeQuery();
+                    int rentalCount = 0;
+                    if (rsCount.next()) {
+                        rentalCount = rsCount.getInt("RentalCount");
+                    }
+
+                    if (rentalCount >= customer.getMaxRental()) {
+                        System.out.println("You have reached the maximum number of rentals.");
+                        return;
+                    }
+
+                    if ((customer.getAccountStyle().equals("VIP")) && (customer.getPoints() >= 100) && (rentalCount == 0)) {
+                        System.out.println("You have a free rent. ");
+                    }
+
+                    // Update the left copy of the item
+                    String updateSql = "UPDATE product SET CopiesLeft = CopiesLeft - 1 WHERE ProductID = ?";
+                    PreparedStatement psUpdate = connectDB.prepareStatement(updateSql);
+                    psUpdate.setString(1, item.getProductID());
+                    psUpdate.executeUpdate();
+
+                    // Insert a new row into the rental table
+                    String insertSql = "INSERT INTO rental (ProductID, account_id, Status) VALUES (?, ?, ?)";
+                    PreparedStatement psInsert = connectDB.prepareStatement(insertSql);
+                    psInsert.setString(1, item.getProductID());
+                    psInsert.setInt(2, Integer.parseInt(customer.getAccount_id()));
+                    psInsert.setString(3, "Not Returned");
+                    psInsert.executeUpdate();
+                    setStatus("Not Returned");
+
+                    System.out.println("You have successfully rented " + item.getTitle() + ".");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 
 }
