@@ -42,12 +42,12 @@ public class HomeController implements Initializable {
     
     
     @FXML
-    private void btnHome(ActionEvent event) {
+    private void btnHome(ActionEvent event) throws IOException {
         Anchorpane view = FXMLLoader.load(getClass().getResource("HomeStage.fxml"));
     }
     
     @FXML 
-    private void btnAbout(ActionEvent event) {
+    private void btnAbout(ActionEvent event) throws IOException {
         AnchorPane view = FXMLLoader.load(getClass().getResource("AboutUs.fxml"));
     }
     
