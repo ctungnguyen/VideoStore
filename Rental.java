@@ -48,61 +48,30 @@ public class Rental {
         try (Connection connection = DriverManager.getConnection(connectionUrl);
              Statement statement = connection.createStatement();) {
 
-            // Check if there are any copies of the item available
-            String selectSql = "SELECT LeftCopy FROM Item WHERE ID = ?";
-            PreparedStatement psSelect = connection.prepareStatement(selectSql);
-            psSelect.setString(1, item.getId());
-            ResultSet rsSelect = psSelect.executeQuery();
-            int leftCopy = 0;
-            if (rsSelect.next()) {
-                leftCopy = rsSelect.getInt("LeftCopy");
-            }
+             String sql = "INSERT INTO rentals (item_id, customer_id, status) VALUES (?, ?, ?)";
+             PreparedStatement statement = connection.prepareStatement(sql);
+             statement.setInt(1, item.getId());
+             statement.setInt(2, customer.getId());
+             statement.setString(3, "Not Returned");
+             int rows = statement.executeUpdate();
 
-            if (leftCopy == 0) {
-                System.out.println("No copies of " + item.getTitle() + " are available for rent.");
-                return;
-            }
+            // Update the left_copy column of the items table
+             sql = "UPDATE items SET left_copy = left_copy - 1 WHERE id = ?";
+             statement = connection.prepareStatement(sql);
+             statement.setInt(1, item.getId());
+             rows = statement.executeUpdate();
 
-            if (item.getType().equals("2-day") && customer.getAccountStyle().equals("Guest")) {
-                System.out.println("Guest accounts cannot rent 2-day items.");
-                return;
-            }
+            // Close the statement and the connection
+             statement.close();
+             connection.close();
 
-            // Check if the customer has reached the maximum number of rentals
-            String countSql = "SELECT COUNT(*) AS RentalCount FROM Rental WHERE CustomerID = ? AND Status = 'Not Returned'";
-            PreparedStatement psCount = connection.prepareStatement(countSql);
-            psCount.setInt(1, customer.getUserId());
-            ResultSet rsCount = psCount.executeQuery();
-            int rentalCount = 0;
-            if (rsCount.next()) {
-                rentalCount = rsCount.getInt("RentalCount");
-            }
+             // Create a new Rental object and add it to the customer's rentals and rental history lists
+             Rental rental = new Rental(item, customer);
+             customer.getRentals().add(rental);
+             customer.getRentalHistory().add(rental);
 
-            if (rentalCount >= customer.getMaxRental()) {
-                System.out.println("You have reached the maximum number of rentals.");
-                return;
-            }
-
-            if ((customer.getAccountStyle().equals("VIP")) && (customer.getPoints() >= 100) && (rentalCount == 0)) {
-                System.out.println("You have a free rent. ");
-            }
-
-            // Update the left copy of the item
-            String updateSql = "UPDATE Item SET LeftCopy = LeftCopy - 1 WHERE ID = ?";
-            PreparedStatement psUpdate = connection.prepareStatement(updateSql);
-            psUpdate.setString(1, item.getId());
-            psUpdate.executeUpdate();
-
-            // Insert a new row into the rental table
-            String insertSql = "INSERT INTO Rental (ItemID, CustomerID, Status) VALUES (?, ?, ?)";
-            PreparedStatement psInsert = connection.prepareStatement(insertSql);
-            psInsert.setString(1, item.getId());
-            psInsert.setInt(2, customer.getUserId());
-            psInsert.setString(3, "Not Returned");
-            psInsert.executeUpdate();
-            setStatus("Not Returned");
-
-            System.out.println("You have successfully rented " + item.getTitle() + ".");
+             System.out.println("You have successfully rented " + item.getTitle() + ".");
+             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
