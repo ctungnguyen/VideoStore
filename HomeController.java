@@ -11,10 +11,12 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
+import javafx.fxml.Initializable;
+import java.util.ResourceBundle;
+import java.net.URL;
 import java.io.IOException;
 
-public class HomeController {
+public class HomeController implements Initializable {
     @FXML
     Label name;
     @FXML
@@ -23,10 +25,35 @@ public class HomeController {
     private Button logoutButton;
     @FXML
     private AnchorPane anchorPane;
+    @FXML
+    private Button About;
+    @FXML
+    private Button Home;
+    
 
      Stage stage;
      Scene scene;
 
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+    // TODO
+    }
+    
+    
+    @FXML
+    private void btnHome(ActionEvent event) {
+        Anchorpane view = FXMLLoader.load(getClass().getResource("HomeStage.fxml"));
+    }
+    
+    @FXML 
+    private void btnAbout(ActionEvent event) {
+        AnchorPane view = FXMLLoader.load(getClass().getResource("AboutUs.fxml"));
+    }
+    
+    
+    
+    
 @FXML
     public void logout(ActionEvent e) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -62,6 +89,7 @@ public class HomeController {
             stage.setScene(scene);
             stage.show();
         }
+    
 
 
 
