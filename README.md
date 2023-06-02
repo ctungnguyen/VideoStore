@@ -4,7 +4,7 @@
 
  # Group Project Contribution:
  
- # Chau Tung Nguyen: 30%
- # Jung Seung Hwan: 25%
+ # Chau Tung Nguyen: 38%
+ # Jung Seung Hwan: 22%
  # Truong Phuoc Huy: 25%
- # Le Tuan Khai: 20%
+ # Le Tuan Khai: 15%
