@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="513.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lastassessment.helpStageController">
+   <children>
+      <VBox layoutY="7.0" prefHeight="448.0" prefWidth="88.0" spacing="15.0">
+         <children>
+            <Label text="-Sign up:" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="-Log in:" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="-Home:" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" prefHeight="39.0" prefWidth="87.0" text="-Item List:" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="-Out of Stock List:" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="-About Us:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="54.0" prefWidth="88.0" text="-Profile Stage:" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="86.0" prefWidth="88.0" text="-How to upgrade Account:" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="84.0" layoutY="3.0" prefHeight="42.0" prefWidth="714.0" text="The customers can create a new account to use our application here, they can update information later. However, username and password is compulsory especially the username is needed to be unique." wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="44.0" prefHeight="42.0" prefWidth="714.0" text="The customers need to log in first to access other functions of our appplication such as to rent and returm items to the store." wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="81.0" prefHeight="63.0" prefWidth="722.0" text="This stage will show the customer the general information about our apllication. To be more specific, customers can have information about what is the main types of items will appears in our store. Moreover, customers can exit this application by click the &quot;Exit&quot; button or click the &quot;x&quot; button." wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="143.0" prefHeight="63.0" prefWidth="714.0" text="This the where the customers can look arounf the  available item list at the moment of our store, if customer like that item, they click on that item and click the rent button to rent the item. Moreover, they can find item on the search bar." wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="202.0" prefHeight="42.0" prefWidth="702.0" text="Generally, this stage is to show the customer what item is out of stock and maybe it will have the item that they want." wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="255.0" prefHeight="42.0" prefWidth="695.0" text="This stage is to show information about our team, the inventors of this application which will have the numbers of members and the methods to contact us." wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="302.0" prefHeight="63.0" prefWidth="702.0" text="Customer can look for their own information here and they can update or change these information anytime they want. In addtition, this stage can show which item cusotmers have rented and customers can returned their item to the store here." wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="378.0" prefHeight="63.0" prefWidth="714.0" text="To upgrade the customers Account Style from Guest to Regular, the sustomer have to done returned 3 item succesfully, the same goes for upgrading from Regular to Vip Account Style, the customers have to rent and return 5 item successfully." wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="454.0" prefHeight="54.0" prefWidth="794.0" text="If you have more questions to ask, please contact us at the About Us to have more specific answers. Thank you very much!" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

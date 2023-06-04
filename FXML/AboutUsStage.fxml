@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="513.0" prefWidth="811.0" style="-fx-background-color: #fff9a1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="237.0" fitWidth="759.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@FXML%20pics/Screenshot_27.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="671.0" layoutY="22.0" prefHeight="207.0" prefWidth="136.0" text="Our team" textAlignment="CENTER" textFill="#080808" wrapText="true">
+         <font>
+            <Font name="Bell MT Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="555.0" layoutY="238.0" prefHeight="62.0" prefWidth="125.0" text="4 members:" wrapText="true">
+         <font>
+            <Font name="Leelawadee UI Semilight" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="137.0" layoutY="218.0" prefHeight="102.0" prefWidth="302.0" text="Contact us" textFill="#080808">
+         <font>
+            <Font name="Segoe Script Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="111.0" layoutY="300.0" text="If you need help , please feel free to call us at:">
+         <font>
+            <Font name="Leelawadee UI Semilight" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="183.0" layoutY="366.0" prefHeight="27.0" prefWidth="194.0" text="Or send us email at:">
+         <font>
+            <Font name="Leelawadee UI Semilight" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="320.0" prefHeight="54.0" prefWidth="302.0" text="+84938724005" textFill="#080808">
+         <font>
+            <Font name="Segoe Script Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="385.0" prefHeight="55.0" prefWidth="386.0" text="s3976069@rmit.edu.vn" textFill="#080808">
+         <font>
+            <Font name="Segoe Script Bold" size="30.0" />
+         </font>
+      </Label>
+      <VBox layoutX="589.0" layoutY="288.0" prefHeight="129.0" prefWidth="163.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="164.0" text="Jung Seung Hwan" wrapText="true">
+               <font>
+                  <Font name="Leelawadee UI Semilight" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="163.0" text="Le Tuan Khai" wrapText="true">
+               <font>
+                  <Font name="Leelawadee UI Semilight" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="29.0" prefWidth="163.0" text="Truong Phuoc Huy" wrapText="true">
+               <font>
+                  <Font name="Leelawadee UI Semilight" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="31.0" prefWidth="163.0" text="Chau Tung Nguyen" wrapText="true">
+               <font>
+                  <Font name="Leelawadee UI Semilight" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="214.0" layoutY="440.0" prefHeight="55.0" prefWidth="426.0" text="We will try to give our customers the best experience when shopping in our video rental application." textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Leelawadee UI Semilight" size="18.0" />
+         </font>
+      </Label>
+      <Line endX="50.0" endY="144.0" layoutX="490.0" layoutY="277.0" startX="50.0" startY="-39.600006103515625" />
+      <Line endX="138.99993896484375" layoutX="629.0" layoutY="421.0" startX="-88.5" />
+   </children>
+</AnchorPane>

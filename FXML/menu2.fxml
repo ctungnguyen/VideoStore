@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lastassessment.HomeController">
+   <children>
+      <BorderPane fx:id="borderPane" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Home">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#moveToHomeStage" text="Return Home" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Rental List">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#moveToListStage" text="Item List" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#moveToOutOfStockStage" text="Out of Stock List" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="About Us">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#moveToAboutUsStage" text="Contact" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Profile">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#moveToProfileStage" text="Your Profile" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#logout" text="Log out" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="26.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="568.0" layoutY="1.0" mnemonicParsing="false" onAction="#moveToHelpStage">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="QUESTION" size="16" />
+                     </graphic>
+                  </Button>
+                  <Label layoutX="276.0" layoutY="4.0" text="Click here if you need help with using our application" />
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lastassessment.SignupController">
+   <children>
+      <BorderPane layoutX="162.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane prefHeight="400.0" prefWidth="225.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text boundsType="LOGICAL_VERTICAL_CENTER" cache="true" fill="WHITE" layoutX="26.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genie's Video Store">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <FontAwesomeIcon fill="WHITE" glyphName="FILM" layoutX="75.0" layoutY="190.0" size="70" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="400.0" prefWidth="391.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="nameTextField" layoutX="21.0" layoutY="33.0" prefHeight="28.0" prefWidth="310.0" promptText="Name" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" />
+                  <TextField fx:id="addressTextField" layoutX="22.0" layoutY="72.0" prefHeight="28.0" prefWidth="310.0" promptText="Address" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" />
+                  <TextField fx:id="phoneTextField" layoutX="23.0" layoutY="113.0" prefHeight="28.0" prefWidth="309.0" promptText="Phone Number" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" />
+                  <TextField fx:id="usernameTextField" layoutX="23.0" layoutY="153.0" prefHeight="28.0" prefWidth="311.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0598ff;" />
+                  <PasswordField fx:id="passTextField" layoutX="22.0" layoutY="193.0" prefHeight="28.0" prefWidth="310.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                  <PasswordField fx:id="passconfirmTextField" layoutX="21.0" layoutY="234.0" prefHeight="28.0" prefWidth="311.0" promptText="Confirm Password" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Button fx:id="signupButton" layoutX="105.0" layoutY="283.0" mnemonicParsing="false" onAction="#signupButton" prefHeight="27.0" prefWidth="63.0" style="-fx-background-color: #0598ff;" text="Sign up" textFill="WHITE" />
+                  <Button fx:id="cancelButton" layoutX="216.0" layoutY="283.0" mnemonicParsing="false" onAction="#cancel" prefHeight="27.0" prefWidth="63.0" style="-fx-background-color: #0598ff;" text="Cancel" textFill="WHITE" />
+                  <Button layoutX="237.0" layoutY="341.0" mnemonicParsing="false" onAction="#moveToLoginStage" style="-fx-background-color: transparent;" text="Log in!" textFill="#005eff" underline="true" />
+                  <Text fill="#5c6063" layoutX="93.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?" />
+                  <Label fx:id="passconfirmLabel" layoutX="126.0" layoutY="323.0" textFill="#ff1000" />
+                  <FontAwesomeIcon fill="#0598ff" glyphName="USER" layoutX="184.0" layoutY="28.0" size="30" text="" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
