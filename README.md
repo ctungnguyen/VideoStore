@@ -25,9 +25,9 @@ To deploy this project, you will need to create an executable JAR file. You can 
 
 ## Authors
 
-* **Chau Tung Nguyen** - *40%*
-* **Truong Phuoc Huy** - *24%*
-* **Jung Seung Hwan** - *21%*
+* **Chau Tung Nguyen** - *45%*
+* **Truong Phuoc Huy** - *20%*
+* **Jung Seung Hwan** - *20%*
 * **Le Tuan Khai** - *15%*
 
 ## License
